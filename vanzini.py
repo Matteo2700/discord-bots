@@ -252,9 +252,8 @@ async def on_message(message):
         except discord.HTTPException:
             await message.channel.send("Errore Discord.")
         except Exception as e:
-            print("Errore:", e)
-            await message.channel.send("Errore API.")
-print("KEY:", GROQ_API_KEY)
+    print("FULL ERROR:", repr(e))
+    await message.channel.send(f"Errore API: {repr(e)}")
 # =========================
 # RUN BOT
 # =========================
