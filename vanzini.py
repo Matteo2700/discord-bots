@@ -254,7 +254,7 @@ async def on_message(message):
         except Exception as e:
             print("Errore:", e)
             await message.channel.send("Errore API.")
-
+print("KEY:", GROQ_API_KEY)
 # =========================
 # RUN BOT
 # =========================
